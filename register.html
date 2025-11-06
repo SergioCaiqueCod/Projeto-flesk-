@@ -10,10 +10,13 @@
     <div class="wrap">
         <h1>Cadastro de Aluno</h1>
 
-        <form action="" method="POST" class="form">
+        <form action="adicionar" method="POST" class="form">
             <input name="nome" type="text" placeholder="Nome" required>
             <input name="idade" type="number" placeholder="Idade" required>
             <input name="email" type="email" placeholder="E-mail" required>
+            <input name="RG" type="text" placeholder="RG" required>
+            <input name="id" type="text" placeholder="id" required>
+
             <button type="submit">Cadastrar</button>
         </form>
 
@@ -21,8 +24,15 @@
     
             <ul class="list">
                <!-- Aqui voce deve colocar as informaçoes dos usuarios voce tera que usar o for e  -->
-                <li></li>
-             
+                {% for item in pessoa%}
+                <p>{{item.nome}}</p>
+                <p>{{item.idade}}</p>
+                <p>{{item.telefone}}</p>
+                <p>{{item.email}}</p>
+                <p>{{item.RG}}</p>
+                <p>{{item.id}}</p>
+                {%endfor%}
+
             </ul>
        
             <p>Nenhum aluno cadastrado.</p>
